@@ -47,6 +47,7 @@ const GlobalHead = (props) => {
             <meta property="og:image" content={image} />
             <meta property="og:site_name" content={siteConfig('TITLE')} />
             <meta property="og:type" content={type} />
+            <meta name="baidu-site-verification" content="codeva-0rzF3rBPt7" />
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:description" content={description} />
             <meta name="twitter:title" content={title} />
