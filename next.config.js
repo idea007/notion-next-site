@@ -2,6 +2,7 @@ const { THEME } = require('./blog.config')
 const fs = require('node:fs')
 const path = require('node:path')
 const BLOG = require('./blog.config')
+const VERCEL_CONFIG = require('./vercel.json')
 const { extractLangPrefix } = require('./lib/utils/pageId')
 const { isExport } = require('./lib/utils/buildMode')
 
@@ -172,6 +173,7 @@ const nextConfig = {
     ? undefined
     : () => {
       return [
+        ...(VERCEL_CONFIG.redirects || []),
         {
           source: '/feed',
           destination: '/rss/feed.xml',
